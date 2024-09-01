@@ -3,7 +3,7 @@
 
 int celsius_to_fahrenheit(float tempc , float result);
 int celsius_to_kelvin(float tempc ,float result);
-int fahrenheit_to_celsius(float tempf ,float reslult);
+int fahrenheit_to_celsius(float tempf ,float result);
 int fahrenheit_to_kelvin(float tempf , float result);
 int kelvin_to_celsius(float tempk , float result);
 int kelvin_to_fahrenheit(float tempk , float result);
@@ -30,7 +30,7 @@ int main(){
     }
     else if (input==2 && output==1){
         tempf=temp;
-        fahrenheit_to_celsius(tempf ,reslult);
+        fahrenheit_to_celsius(tempf ,result);
     }
     else if (input==2 && output==3){
         tempf=temp;
@@ -52,6 +52,32 @@ int main(){
 
 int celsius_to_fahrenheit(float tempc ,float result){
     result=(tempc * 9/5) + 32;
-    printf("Temperature : %f",result);
+    printf("Temperature : %f F",result);
     return 0;
 }
+int celsius_to_kelvin(float tempc ,float result){
+    result=tempc + 273.15;
+    printf("Temperature : %f K",result);
+    return 0;
+}
+int fahrenheit_to_celsius(float tempf ,float result){
+    result=(tempf - 32) * 5/9;
+    printf("Temperature : %f C",result);
+    return 0;
+}
+int fahrenheit_to_kelvin(float tempf , float result){
+    result=(tempf - 32) * 5/9 + 273.15 ;
+    printf("Temperature : %f K",result);
+    return 0;
+}
+int kelvin_to_celsius(float tempk , float result){
+    result= tempk - 273.15 ;
+    printf("Temperature : %f C",result);
+    return 0;
+}
+int kelvin_to_fahrenheit(float tempk , float result){
+    result=(tempk - 273.15) * 9/5 + 32 ;
+    printf("Temperature : %f F",result);
+    return 0;
+}
+
