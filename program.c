@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <conio.h>
 
-int celsius_to_fahrenheit(int tempc , int result);
-int celsius_to_kelvin(int tempc ,int result);
-int fahrenheit_to_celsius(int tempf ,int reslult);
-int fahrenheit_to_kelvin(int tempf , int result);
-int kelvin_to_celsius(int tempk , int result);
-int kelvin_to_fahrenheit(int tempk , int result);
+int celsius_to_fahrenheit(float tempc , float result);
+int celsius_to_kelvin(float tempc ,float result);
+int fahrenheit_to_celsius(float tempf ,float reslult);
+int fahrenheit_to_kelvin(float tempf , float result);
+int kelvin_to_celsius(float tempk , float result);
+int kelvin_to_fahrenheit(float tempk , float result);
 
 int main(){
     printf("Temperature Conversion");
@@ -15,10 +15,10 @@ int main(){
     scanf("%d",&input);
     printf("Enter the output temperature type (1 for celsius , 2 for kelvin , 3 for fahrenheit) : ");
     scanf("%d",&output);
-    int temp,tempc,tempk,tempf;
+    float temp,tempc,tempk,tempf;
     printf("Enter the input temperature  : ");
     scanf("%d",&temp);
-    int result;
+    float result;
 
     if (input==1 && output==2){
         tempc=temp;
@@ -47,5 +47,11 @@ int main(){
     else{
         printf("Invalid Choice of Standards");
     }
+    return 0;
+}
+
+int celsius_to_fahrenheit(float tempc ,float result){
+    result=(tempc * 9/5) + 32;
+    printf("Temperature : %f",result);
     return 0;
 }
