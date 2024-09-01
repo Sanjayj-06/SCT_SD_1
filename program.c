@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <conio.h>
 
 int celsius_to_fahrenheit(float tempc , float result);
 int celsius_to_kelvin(float tempc ,float result);
